@@ -1,4 +1,5 @@
-package com.laboon;
+package com.jun;
+
 
 import java.util.Scanner;
 

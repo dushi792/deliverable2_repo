@@ -1,4 +1,4 @@
-package com.laboon;
+package com.jun;
 
 public class CoffeeMaker {
 

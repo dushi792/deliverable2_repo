@@ -66,7 +66,6 @@ public class Game {
 			System.out.println("You lose!");
 			toReturn = 1;
 		}
-		
 		return toReturn;
 	}
 	

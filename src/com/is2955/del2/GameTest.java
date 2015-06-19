@@ -20,4 +20,23 @@ public class GameTest {
 		verify(h, never()).moveSouth();
 		assertEquals(result, 0);
 	}
+	@Test
+	public void testShowInventory() {
+		Player p = mock(Player.class);
+		House h = mock(House.class);
+		Game g = new Game(p, h);
+		
+		int result = g.doSomething("I");
+		
+		verify(p).showInventory();
+		assertEquals(result, 0);
+	}
+	@Test
+	public void testGenerateRooms() {
+		Player p = mock(Player.class);
+		House h = mock(House.class);
+		Game g = new Game(p, h);
+		
+		when(h.generateRooms(6)).thenReturn("TEST");
+	}
 }

@@ -17,4 +17,6 @@ public class HouseTest {
 		String result = h.getCurrentRoomInfo();
 		assertEquals(result, "TEST");
 	}
+	
+	
 }

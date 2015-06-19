@@ -1,4 +1,4 @@
-package com.jun;
+package com.is2955.del2;
 
 import static org.junit.Assert.*;
 
@@ -16,9 +16,8 @@ public class GameTest {
 		//Execution step
 		int result = g.doSomething("N");
 		//Assertions
-		verify(h, times(1)).moveNorth();
+		verify(h).moveNorth();
 		verify(h, never()).moveSouth();
 		assertEquals(result, 0);
 	}
-
 }

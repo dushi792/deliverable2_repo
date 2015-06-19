@@ -1,4 +1,4 @@
-package com.jun;
+package com.is2955.del2;
 
 
 import java.util.Scanner;

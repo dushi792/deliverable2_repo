@@ -1,4 +1,4 @@
-package com.jun;
+package com.is2955.del2;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -17,5 +17,4 @@ public class HouseTest {
 		String result = h.getCurrentRoomInfo();
 		assertEquals(result, "TEST");
 	}
-
 }

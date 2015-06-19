@@ -17,4 +17,11 @@ public class HouseTest {
 		String result = h.getCurrentRoomInfo();
 		assertEquals(result, "TEST");
 	}
+	
+	@Test
+	public void testGenerateRooms() {
+		House h = new House(2);
+		Room[] result = h.generateRooms(2);
+		assertArrayEquals(result, result);
+	}
 }

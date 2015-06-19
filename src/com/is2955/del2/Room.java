@@ -99,7 +99,6 @@ public class Room {
 		}
 		
 		return toReturn;
-		
 	}
 	
 	public Room(boolean hasCoffee, 

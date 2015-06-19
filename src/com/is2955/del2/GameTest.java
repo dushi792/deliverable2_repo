@@ -37,6 +37,6 @@ public class GameTest {
 		House h = mock(House.class);
 		Game g = new Game(p, h);
 		
-		when(h.generateRooms(6)).thenReturn("TEST");
+
 	}
 }

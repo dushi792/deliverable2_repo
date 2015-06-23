@@ -1,8 +1,7 @@
 package com.is2955.del2;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 import org.junit.Test;
 
@@ -51,9 +50,8 @@ public class RoomTest {
 	}
 	
 	@Test
-	public void testGetDescription() {
+	public void testGenerateDescription() {
 		Room r = new Room(true, false, false, true, false);
-		boolean result = r.getDescription()!=null;
-		assertEquals(result, true);
+		assertNotNull(r.getDescription());
 	}
 }

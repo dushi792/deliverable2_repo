@@ -47,4 +47,5 @@ public class GameTest {
 		verify(p).showInventory();
 		assertEquals(result, 0);
 	}
+	
 }

@@ -17,11 +17,13 @@ public class HouseTest {
 		String result = h.getCurrentRoomInfo();
 		assertEquals(result, "TEST");
 	}
-	
+	//Test if GenerateRooms does generate unique rooms
 	@Test
 	public void testGenerateRooms() {
-		House h = new House(2);
-		Room[] result = h.generateRooms(2);
-		assertArrayEquals(result, result);
+		House h = new House(1);
+		Room[] rooms = h.generateRooms(3);		
+		assertNotNull(rooms);
+		Room[] rooms2 = h.generateRooms(3);
+		assertNotEquals(rooms, rooms2);
 	}
 }

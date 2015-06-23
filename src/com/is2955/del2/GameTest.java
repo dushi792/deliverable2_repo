@@ -24,7 +24,7 @@ public class GameTest {
 	}
 	
 	@Test
-	public void testDrink() {
+	public void testDrink1() {
 		//Precondition
 		Player p = mock(Player.class);
 		when(p.drink()).thenReturn(true);
@@ -33,8 +33,22 @@ public class GameTest {
 		//Execution step
 		int result = g.doSomething("D");
 		//Assertions
-		//verify(p).drink();
-		assertEquals(result, 100);
+		verify(p).drink();
+		assertEquals(result, 1);
+	}
+	
+	@Test
+	public void testDrink2() {
+		//Precondition
+		Player p = mock(Player.class);
+		when(p.drink()).thenReturn(false);
+		House h = mock(House.class);
+		Game g = new Game(p, h);
+		//Execution step
+		int result = g.doSomething("D");
+		//Assertions
+		verify(p).drink();
+		assertEquals(result, -1);
 	}
 	
 	@Test

@@ -27,13 +27,14 @@ public class GameTest {
 	public void testDrink() {
 		//Precondition
 		Player p = mock(Player.class);
+		when(p.drink()).thenReturn(true);
 		House h = mock(House.class);
 		Game g = new Game(p, h);
 		//Execution step
 		int result = g.doSomething("D");
 		//Assertions
-		verify(p).drink();
-		assertEquals(result, -1);
+		//verify(p).drink();
+		assertEquals(result, 100);
 	}
 	
 	@Test
@@ -41,9 +42,8 @@ public class GameTest {
 		Player p = mock(Player.class);
 		House h = mock(House.class);
 		Game g = new Game(p, h);
-		
 		int result = g.doSomething("I");
-		
+
 		verify(p).showInventory();
 		assertEquals(result, 0);
 	}

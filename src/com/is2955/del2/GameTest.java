@@ -22,7 +22,19 @@ public class GameTest {
 		verify(h, never()).moveSouth();
 		assertEquals(result, 0);
 	}
-	
+	@Test
+	public void testMoveSorth() {
+		//Precondition
+		Player p = mock(Player.class);
+		House h = mock(House.class);
+		Game g = new Game(p, h);
+		//Execution step
+		int result = g.doSomething("S");
+		//Assertions
+		verify(h).moveSouth();
+		verify(h, never()).moveNorth();
+		assertEquals(result, 0);
+	}
 	@Test
 	public void testDrink1() {
 		//Precondition
